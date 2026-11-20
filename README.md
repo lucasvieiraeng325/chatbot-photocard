@@ -120,6 +120,9 @@ As prévias ficam em `previas/produtos/`: **uma imagem por produto**, um mosaico
 
 ## Hospedagem
 
+Passo a passo completo em [`deploy/README.md`](deploy/README.md) (instalação com um comando).
+
+
 O bot precisa ficar ligado 24h. Opções: uma VPS (Contabo, Hostinger, DigitalOcean, Oracle Cloud free tier…), Railway, Render (com disco persistente) etc. Precisa de disco persistente para `data/` (sessão do WhatsApp e pedidos). Para manter rodando numa VPS:
 
 ```bash
