@@ -101,7 +101,7 @@ Tudo fica no [`catalog.json`](catalog.json):
 npm run previas
 ```
 
-As prévias ficam em `previas/` (primeira página de cada PDF, em baixa resolução e com marca d'água, e um mosaico para produtos com vários arquivos). Para usar imagens próprias, coloque `"previas": ["previas/minha-imagem.jpg"]` no produto. Depois de alterar o catálogo, reinicie o bot.
+As prévias ficam em `previas/produtos/`: **uma imagem por produto**, um mosaico compacto com marca d'água (até 4 páginas para um PDF avulso; a 1ª página de cada PDF, até 9, para pacotes). Páginas só de texto, como o aviso de direitos autorais, são puladas. Para usar imagens próprias, coloque `"previas": ["previas/minha-imagem.jpg"]` no produto. Depois de alterar o catálogo, reinicie o bot.
 
 ## Como a confirmação do pagamento funciona
 

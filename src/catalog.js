@@ -20,13 +20,7 @@ export function slugify(text) {
     .replace(/^-|-$/g, '');
 }
 
-/** Caminho da imagem de prévia de um arquivo (PDF) do repositório. */
-export function previewPathForFile(absPath) {
-  const rel = path.relative(config.contentDir, absPath);
-  return path.join(config.previewDir, 'arquivos', slugify(rel.replace(/\.[^.]+$/, '')) + '.jpg');
-}
-
-/** Caminho do mosaico de prévia de um produto com vários arquivos. */
+/** Caminho da imagem de prévia (mosaico) de um produto. */
 export function productPreviewPath(productId) {
   return path.join(config.previewDir, 'produtos', slugify(productId) + '.jpg');
 }
@@ -81,14 +75,10 @@ function buildProduct(raw, opts) {
   const files = expandFiles(raw.arquivos || [], opts);
   if (opts.checkFiles && files.length === 0) throw new Error(`Produto "${raw.id}" não tem arquivos`);
 
-  let previews;
-  if (raw.previas?.length) {
-    previews = raw.previas.map((p) => resolveInside(path.dirname(config.catalogFile), p));
-  } else {
-    const mosaic = productPreviewPath(raw.id);
-    const covers = files.map((f) => previewPathForFile(f.absPath));
-    previews = files.length > 1 ? [mosaic, ...covers.slice(0, 3)] : covers;
-  }
+  // Uma única imagem (mosaico) por produto, ou as imagens definidas em "previas"
+  let previews = raw.previas?.length
+    ? raw.previas.map((p) => resolveInside(path.dirname(config.catalogFile), p))
+    : [productPreviewPath(raw.id)];
   previews = previews.filter((p) => fs.existsSync(p));
 
   return {
