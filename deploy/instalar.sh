@@ -46,10 +46,8 @@ if [ ! -f .env ]; then
   echo
   echo "==> Configuração (.env)"
   read -rp "Access Token de PRODUÇÃO do Mercado Pago (APP_USR-...): " MP
-  read -rp "Número do WhatsApp do bot, com DDI e DDD (ex.: 5521999999999): " NUM
   read -rp "Números que recebem aviso de venda (separados por vírgula, pode deixar vazio): " ADM
   sed -i "s|^MP_ACCESS_TOKEN=.*|MP_ACCESS_TOKEN=${MP}|" .env
-  sed -i "s|^WHATSAPP_PAIRING_NUMBER=.*|WHATSAPP_PAIRING_NUMBER=${NUM//[^0-9]/}|" .env
   sed -i "s|^ADMIN_NUMBERS=.*|ADMIN_NUMBERS=${ADM}|" .env
   chmod 600 .env
 fi
@@ -64,10 +62,11 @@ cat <<MSG
 
 ✅ Instalado! Agora conecte o WhatsApp:
 
-   pm2 logs photocard-bot
+   pm2 logs photocard-bot --raw --lines 0
 
-Vai aparecer um CÓDIGO de 8 letras. No celular do bot: WhatsApp > Aparelhos conectados >
-Conectar um aparelho > "Conectar com número de telefone" e digite o código.
+Vai aparecer um QR CODE. No celular do bot: WhatsApp > Aparelhos conectados >
+Conectar um aparelho, e escaneie (o QR muda a cada ~20 s; use o mais recente).
+Se o QR não aparecer direito, ele também fica salvo em ~/chatbot-photocard/data/qr.png.
 Quando aparecer "✅ WhatsApp conectado", aperte Ctrl+C (o bot continua rodando).
 
 Comandos úteis:
