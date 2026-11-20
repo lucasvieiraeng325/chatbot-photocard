@@ -1,0 +1,281 @@
+{
+  "_instrucoes": "Edite nomes, descrições e preços (em reais). arquivos aceita pastas ou arquivos relativos à raiz do repositório. Depois de adicionar PDFs rode: npm run previas",
+  "menu": [
+    {
+      "id": "pacote-premium",
+      "nome": "⭐ Pacote Premium Completo",
+      "descricao": "TUDO o que temos: todas as folhas de photocards K-pop + todos os bônus (BTS Tour Arirang, photocards adicionais, caixinhas, planner, bloquinhos, caixa presente, livro de colorir, folhas personalizadas e guia de como vender + vídeo de impressão).",
+      "preco": 29.9,
+      "arquivos": [
+        "PACOTE PREMIUM"
+      ]
+    },
+    {
+      "id": "pack-photocards-kpop",
+      "nome": "Pack Photocards K-pop",
+      "descricao": "Todas as folhas de photocards dos grupos de K-pop (sem os bônus).",
+      "preco": 19.9,
+      "arquivos": [
+        "PACOTE PREMIUM/PHOTOCARDS KPOP"
+      ]
+    },
+    {
+      "id": "pack-bts-tour",
+      "nome": "Pack BTS Tour Arirang",
+      "descricao": "Photocards especiais da turnê do BTS: Toronto, Chicago, Los Angeles, Baltimore, Arlington, East Rutherford, Bruxelas, especial 13 anos e mais.",
+      "preco": 12.9,
+      "arquivos": [
+        "PACOTE PREMIUM/BÔNUS/BTS TOUR ARIRIRANG"
+      ]
+    },
+    {
+      "categoria": "Photocards avulsos (por grupo)",
+      "descricao": "Escolha o grupo que você quer:",
+      "produtos": [
+        {
+          "id": "pc-aespa",
+          "nome": "Photocards AESPA",
+          "descricao": "Folha de photocards em PDF pronta para imprimir.",
+          "preco": 3.99,
+          "arquivos": [
+            "PACOTE PREMIUM/PHOTOCARDS KPOP/photocard - AESPA.pdf"
+          ]
+        },
+        {
+          "id": "pc-ateez",
+          "nome": "Photocards ATEEZ",
+          "descricao": "Folha de photocards em PDF pronta para imprimir.",
+          "preco": 3.99,
+          "arquivos": [
+            "PACOTE PREMIUM/PHOTOCARDS KPOP/Photocard - ATEEZ.pdf"
+          ]
+        },
+        {
+          "id": "pc-babymonster",
+          "nome": "Photocards BABYMONSTER",
+          "descricao": "Folha de photocards em PDF pronta para imprimir.",
+          "preco": 3.99,
+          "arquivos": [
+            "PACOTE PREMIUM/PHOTOCARDS KPOP/photocard - BABY MONSTER.pdf"
+          ]
+        },
+        {
+          "id": "pc-blackpink",
+          "nome": "Photocards BLACKPINK",
+          "descricao": "Folha de photocards em PDF pronta para imprimir.",
+          "preco": 3.99,
+          "arquivos": [
+            "PACOTE PREMIUM/PHOTOCARDS KPOP/photocard - BLACK PINK.pdf"
+          ]
+        },
+        {
+          "id": "pc-boy-next-door",
+          "nome": "Photocards BOY NEXT DOOR",
+          "descricao": "Folha de photocards em PDF pronta para imprimir.",
+          "preco": 3.99,
+          "arquivos": [
+            "PACOTE PREMIUM/PHOTOCARDS KPOP/Photocard - BOY NEXT DOOR  .pdf"
+          ]
+        },
+        {
+          "id": "pc-bts",
+          "nome": "Photocards BTS",
+          "descricao": "Folha de photocards em PDF pronta para imprimir.",
+          "preco": 3.99,
+          "arquivos": [
+            "PACOTE PREMIUM/PHOTOCARDS KPOP/photocard - BTS.pdf"
+          ]
+        },
+        {
+          "id": "pc-cortis",
+          "nome": "Photocards CORTIS",
+          "descricao": "Folha de photocards em PDF pronta para imprimir.",
+          "preco": 3.99,
+          "arquivos": [
+            "PACOTE PREMIUM/PHOTOCARDS KPOP/photocard - CORTIS.pdf"
+          ]
+        },
+        {
+          "id": "pc-enhypen",
+          "nome": "Photocards ENHYPEN",
+          "descricao": "Folha de photocards em PDF pronta para imprimir.",
+          "preco": 3.99,
+          "arquivos": [
+            "PACOTE PREMIUM/PHOTOCARDS KPOP/Photocard - ENHYPEN.pdf"
+          ]
+        },
+        {
+          "id": "pc-enhypen-vol-2",
+          "nome": "Photocards ENHYPEN (vol. 2)",
+          "descricao": "Folha de photocards em PDF pronta para imprimir.",
+          "preco": 3.99,
+          "arquivos": [
+            "PACOTE PREMIUM/PHOTOCARDS KPOP/photocard - ENHYPEN(1).pdf"
+          ]
+        },
+        {
+          "id": "pc-exo",
+          "nome": "Photocards EXO",
+          "descricao": "Folha de photocards em PDF pronta para imprimir.",
+          "preco": 3.99,
+          "arquivos": [
+            "PACOTE PREMIUM/PHOTOCARDS KPOP/photocard - EXO.pdf"
+          ]
+        },
+        {
+          "id": "pc-flio",
+          "nome": "Photocards FLIO",
+          "descricao": "Folha de photocards em PDF pronta para imprimir.",
+          "preco": 3.99,
+          "arquivos": [
+            "PACOTE PREMIUM/PHOTOCARDS KPOP/photocard - FLIO.pdf"
+          ]
+        },
+        {
+          "id": "pc-guerreiras-do-k-pop",
+          "nome": "Photocards Guerreiras do K-pop",
+          "descricao": "Folha de photocards em PDF pronta para imprimir.",
+          "preco": 3.99,
+          "arquivos": [
+            "PACOTE PREMIUM/PHOTOCARDS KPOP/photocard - GUERREIRAS DO K-POP.pdf"
+          ]
+        },
+        {
+          "id": "pc-illit",
+          "nome": "Photocards ILLIT",
+          "descricao": "Folha de photocards em PDF pronta para imprimir.",
+          "preco": 3.99,
+          "arquivos": [
+            "PACOTE PREMIUM/PHOTOCARDS KPOP/photocard - ILLIT.pdf"
+          ]
+        },
+        {
+          "id": "pc-itzy",
+          "nome": "Photocards ITZY",
+          "descricao": "Folha de photocards em PDF pronta para imprimir.",
+          "preco": 3.99,
+          "arquivos": [
+            "PACOTE PREMIUM/PHOTOCARDS KPOP/Photocard - ITZY.pdf"
+          ]
+        },
+        {
+          "id": "pc-ive",
+          "nome": "Photocards IVE",
+          "descricao": "Folha de photocards em PDF pronta para imprimir.",
+          "preco": 3.99,
+          "arquivos": [
+            "PACOTE PREMIUM/PHOTOCARDS KPOP/Photocard - IVE.pdf"
+          ]
+        },
+        {
+          "id": "pc-katsaya",
+          "nome": "Photocards KATSAYA",
+          "descricao": "Folha de photocards em PDF pronta para imprimir.",
+          "preco": 3.99,
+          "arquivos": [
+            "PACOTE PREMIUM/PHOTOCARDS KPOP/photocard - KATSAYA.pdf"
+          ]
+        },
+        {
+          "id": "pc-katsaye-at",
+          "nome": "Photocards KATSAYE AT",
+          "descricao": "Folha de photocards em PDF pronta para imprimir.",
+          "preco": 3.99,
+          "arquivos": [
+            "PACOTE PREMIUM/PHOTOCARDS KPOP/photocard - KATSAYE AT.pdf"
+          ]
+        },
+        {
+          "id": "pc-lngshot",
+          "nome": "Photocards LNGSHOT",
+          "descricao": "Folha de photocards em PDF pronta para imprimir.",
+          "preco": 3.99,
+          "arquivos": [
+            "PACOTE PREMIUM/PHOTOCARDS KPOP/Photocard -  LNGSHOT.pdf"
+          ]
+        },
+        {
+          "id": "pc-newjeans",
+          "nome": "Photocards NEWJEANS",
+          "descricao": "Folha de photocards em PDF pronta para imprimir.",
+          "preco": 3.99,
+          "arquivos": [
+            "PACOTE PREMIUM/PHOTOCARDS KPOP/photocard - NEWJEANS.pdf"
+          ]
+        },
+        {
+          "id": "pc-pack-copa-atualizado",
+          "nome": "Pack Copa (atualizado)",
+          "descricao": "Folha de photocards em PDF pronta para imprimir.",
+          "preco": 3.99,
+          "arquivos": [
+            "PACOTE PREMIUM/PHOTOCARDS KPOP/PACK COPA ATUALIZADO.pdf"
+          ]
+        },
+        {
+          "id": "pc-pack-de-variados-atualizacao-semanal",
+          "nome": "Pack de Variados (atualização semanal)",
+          "descricao": "Folha de photocards em PDF pronta para imprimir.",
+          "preco": 3.99,
+          "arquivos": [
+            "PACOTE PREMIUM/PHOTOCARDS KPOP/ATUALIZAÇÃO SEMANAL - PACK DE VARIADOS.pdf"
+          ]
+        },
+        {
+          "id": "pc-seventeen",
+          "nome": "Photocards SEVENTEEN",
+          "descricao": "Folha de photocards em PDF pronta para imprimir.",
+          "preco": 3.99,
+          "arquivos": [
+            "PACOTE PREMIUM/PHOTOCARDS KPOP/photocard - SEVENTEEN.pdf"
+          ]
+        },
+        {
+          "id": "pc-stray-kids",
+          "nome": "Photocards Stray Kids",
+          "descricao": "Folha de photocards em PDF pronta para imprimir.",
+          "preco": 3.99,
+          "arquivos": [
+            "PACOTE PREMIUM/PHOTOCARDS KPOP/photocard - STRAYKIDS.pdf"
+          ]
+        },
+        {
+          "id": "pc-stray-kids-pack-atualizado",
+          "nome": "Photocards Stray Kids (pack atualizado)",
+          "descricao": "Folha de photocards em PDF pronta para imprimir.",
+          "preco": 3.99,
+          "arquivos": [
+            "PACOTE PREMIUM/PHOTOCARDS KPOP/PACK ATUALIZADO STRAYKIDS.pdf"
+          ]
+        },
+        {
+          "id": "pc-twice",
+          "nome": "Photocards TWICE",
+          "descricao": "Folha de photocards em PDF pronta para imprimir.",
+          "preco": 3.99,
+          "arquivos": [
+            "PACOTE PREMIUM/PHOTOCARDS KPOP/photocard - TWICE.pdf"
+          ]
+        },
+        {
+          "id": "pc-txt",
+          "nome": "Photocards TXT",
+          "descricao": "Folha de photocards em PDF pronta para imprimir.",
+          "preco": 3.99,
+          "arquivos": [
+            "PACOTE PREMIUM/PHOTOCARDS KPOP/photocard - TXT.pdf"
+          ]
+        },
+        {
+          "id": "pc-whh",
+          "nome": "Photocards WHH",
+          "descricao": "Folha de photocards em PDF pronta para imprimir.",
+          "preco": 3.99,
+          "arquivos": [
+            "PACOTE PREMIUM/PHOTOCARDS KPOP/photocard - WHH.pdf"
+          ]
+        }
+      ]
+    }
+  ]
+}
