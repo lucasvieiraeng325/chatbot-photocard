@@ -36,7 +36,6 @@ bash instalar.sh
 
 O script instala tudo, baixa o repositório e pergunta:
 - o **Access Token de produção do Mercado Pago**;
-- o **número do WhatsApp do bot** (com 55 + DDD);
 - os números que recebem **aviso de venda** (opcional).
 
 > **Repositório privado?** O `curl` acima não funciona; copie o conteúdo de `deploy/instalar.sh` para o servidor (ex.: `nano instalar.sh`, colar, salvar). Na hora do download o git pede **usuário** e **senha**: a senha é um *token* do GitHub (GitHub > Settings > Developer settings > Personal access tokens > Fine-grained, com acesso de leitura a este repositório).
@@ -44,10 +43,16 @@ O script instala tudo, baixa o repositório e pergunta:
 ## 4. Conectar o WhatsApp
 
 ```bash
-pm2 logs photocard-bot
+pm2 logs photocard-bot --raw --lines 0
 ```
 
-Aparece um **código de 8 letras**. No celular do bot: *WhatsApp > Aparelhos conectados > Conectar um aparelho > Conectar com número de telefone* e digite o código. Quando aparecer **"✅ WhatsApp conectado"**, aperte `Ctrl+C` (o bot continua rodando).
+Aparece um **QR code**. No celular do bot: *WhatsApp > Aparelhos conectados > Conectar um aparelho* e escaneie (ele muda a cada ~20 s; use o mais recente). Quando aparecer **"✅ WhatsApp conectado"**, aperte `Ctrl+C` (o bot continua rodando).
+
+Se o QR sair desalinhado no terminal, baixe a imagem para o seu computador (Windows PowerShell):
+
+```powershell
+scp -i "$HOME\Downloads\SUA-CHAVE.key" ubuntu@IP_DO_SERVIDOR:~/chatbot-photocard/data/qr.png "$HOME\Downloads\qr.png"; start "$HOME\Downloads\qr.png"
+```
 
 > ⚠️ Desconecte qualquer outra instância do bot antes (o mesmo número não pode estar ligado em dois servidores ao mesmo tempo).
 
