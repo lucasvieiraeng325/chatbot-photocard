@@ -18,7 +18,14 @@ import { ProxyAgent, setGlobalDispatcher } from 'undici';
 // Se houver HTTPS_PROXY no ambiente, conecta ao WhatsApp através dele
 const PROXY = process.env.HTTPS_PROXY || process.env.https_proxy || '';
 if (PROXY) setGlobalDispatcher(new ProxyAgent(PROXY)); // fetch() de downloads/uploads de mídia
-const proxyAgents = PROXY ? { agent: new HttpsProxyAgent(PROXY), fetchAgent: new HttpsProxyAgent(PROXY) } : {};
+const proxyAgents = PROXY
+  ? {
+      agent: new HttpsProxyAgent(PROXY),
+      fetchAgent: new HttpsProxyAgent(PROXY),
+      // atrás de proxy com lista de hosts liberados: envia mídia sempre pelo host principal
+      customUploadHosts: [{ hostname: 'mmg.whatsapp.net', maxContentLengthBytes: 100 * 1024 * 1024 }],
+    }
+  : {};
 
 function extractText(message) {
   if (!message) return null;
