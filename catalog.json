@@ -1,278 +1,542 @@
 {
-  "_instrucoes": "Edite nomes, descrições e preços (em reais). arquivos aceita pastas ou arquivos relativos à raiz do repositório. Depois de adicionar PDFs rode: npm run previas",
+  "_instrucoes": "Cada item é um PDF. Edite nomes, descrições e preços (em reais). arquivos aceita pastas ou arquivos relativos à raiz do repositório. Depois de adicionar/alterar produtos rode: npm run previas",
   "menu": [
     {
-      "id": "pacote-premium",
-      "nome": "⭐ Pacote Premium Completo",
-      "descricao": "TUDO o que temos: todas as folhas de photocards K-pop + todos os bônus (BTS Tour Arirang, photocards adicionais, caixinhas, planner, bloquinhos, caixa presente, livro de colorir, folhas personalizadas e guia de como vender + vídeo de impressão).",
-      "preco": 29.9,
-      "arquivos": [
-        "PACOTE PREMIUM"
-      ]
-    },
-    {
-      "id": "pack-photocards-kpop",
-      "nome": "Pack Photocards K-pop",
-      "descricao": "Todas as folhas de photocards dos grupos de K-pop (sem os bônus).",
-      "preco": 19.9,
-      "arquivos": [
-        "PACOTE PREMIUM/PHOTOCARDS KPOP"
-      ]
-    },
-    {
-      "id": "pack-bts-tour",
-      "nome": "Pack BTS Tour Arirang",
-      "descricao": "Photocards especiais da turnê do BTS: Toronto, Chicago, Los Angeles, Baltimore, Arlington, East Rutherford, Bruxelas, especial 13 anos e mais.",
-      "preco": 12.9,
-      "arquivos": [
-        "PACOTE PREMIUM/BÔNUS/BTS TOUR ARIRIRANG"
-      ]
-    },
-    {
-      "categoria": "Photocards avulsos (por grupo)",
-      "descricao": "Escolha o grupo que você quer:",
+      "categoria": "Photocards de grupos K-pop",
+      "descricao": "Escolha o grupo:",
       "produtos": [
         {
           "id": "pc-aespa",
-          "nome": "Photocards AESPA",
-          "descricao": "Folha de photocards em PDF pronta para imprimir.",
-          "preco": 3.99,
+          "nome": "aespa",
+          "descricao": "Photocards aespa em PDF (12 páginas, frente e verso), prontos para imprimir e recortar.",
+          "preco": 5,
           "arquivos": [
             "PACOTE PREMIUM/PHOTOCARDS KPOP/photocard - AESPA.pdf"
           ]
         },
         {
           "id": "pc-ateez",
-          "nome": "Photocards ATEEZ",
-          "descricao": "Folha de photocards em PDF pronta para imprimir.",
-          "preco": 3.99,
+          "nome": "ATEEZ",
+          "descricao": "Photocards ATEEZ em PDF (12 páginas, frente e verso), prontos para imprimir e recortar.",
+          "preco": 5,
           "arquivos": [
             "PACOTE PREMIUM/PHOTOCARDS KPOP/Photocard - ATEEZ.pdf"
           ]
         },
         {
           "id": "pc-babymonster",
-          "nome": "Photocards BABYMONSTER",
-          "descricao": "Folha de photocards em PDF pronta para imprimir.",
-          "preco": 3.99,
+          "nome": "BABYMONSTER",
+          "descricao": "Photocards BABYMONSTER em PDF (10 páginas, frente e verso), prontos para imprimir e recortar.",
+          "preco": 5,
           "arquivos": [
             "PACOTE PREMIUM/PHOTOCARDS KPOP/photocard - BABY MONSTER.pdf"
           ]
         },
         {
           "id": "pc-blackpink",
-          "nome": "Photocards BLACKPINK",
-          "descricao": "Folha de photocards em PDF pronta para imprimir.",
-          "preco": 3.99,
+          "nome": "BLACKPINK",
+          "descricao": "Photocards BLACKPINK em PDF (12 páginas, frente e verso), prontos para imprimir e recortar.",
+          "preco": 5,
           "arquivos": [
             "PACOTE PREMIUM/PHOTOCARDS KPOP/photocard - BLACK PINK.pdf"
           ]
         },
         {
-          "id": "pc-boy-next-door",
-          "nome": "Photocards BOY NEXT DOOR",
-          "descricao": "Folha de photocards em PDF pronta para imprimir.",
-          "preco": 3.99,
+          "id": "pc-boynextdoor",
+          "nome": "BOYNEXTDOOR",
+          "descricao": "Photocards BOYNEXTDOOR em PDF (12 páginas, frente e verso), prontos para imprimir e recortar.",
+          "preco": 5,
           "arquivos": [
             "PACOTE PREMIUM/PHOTOCARDS KPOP/Photocard - BOY NEXT DOOR  .pdf"
           ]
         },
         {
           "id": "pc-bts",
-          "nome": "Photocards BTS",
-          "descricao": "Folha de photocards em PDF pronta para imprimir.",
-          "preco": 3.99,
+          "nome": "BTS",
+          "descricao": "Photocards BTS em PDF (12 páginas, frente e verso), prontos para imprimir e recortar.",
+          "preco": 5,
           "arquivos": [
             "PACOTE PREMIUM/PHOTOCARDS KPOP/photocard - BTS.pdf"
           ]
         },
         {
           "id": "pc-cortis",
-          "nome": "Photocards CORTIS",
-          "descricao": "Folha de photocards em PDF pronta para imprimir.",
-          "preco": 3.99,
+          "nome": "CORTIS",
+          "descricao": "Photocards CORTIS em PDF (11 páginas, frente e verso), prontos para imprimir e recortar.",
+          "preco": 5,
           "arquivos": [
             "PACOTE PREMIUM/PHOTOCARDS KPOP/photocard - CORTIS.pdf"
           ]
         },
         {
-          "id": "pc-enhypen",
-          "nome": "Photocards ENHYPEN",
-          "descricao": "Folha de photocards em PDF pronta para imprimir.",
-          "preco": 3.99,
+          "id": "pc-enhypen-vol-1",
+          "nome": "ENHYPEN (vol. 1)",
+          "descricao": "Photocards ENHYPEN (vol. 1) em PDF (19 páginas, frente e verso), prontos para imprimir e recortar.",
+          "preco": 5,
           "arquivos": [
             "PACOTE PREMIUM/PHOTOCARDS KPOP/Photocard - ENHYPEN.pdf"
           ]
         },
         {
           "id": "pc-enhypen-vol-2",
-          "nome": "Photocards ENHYPEN (vol. 2)",
-          "descricao": "Folha de photocards em PDF pronta para imprimir.",
-          "preco": 3.99,
+          "nome": "ENHYPEN (vol. 2)",
+          "descricao": "Photocards ENHYPEN (vol. 2) em PDF (6 páginas, frente e verso), prontos para imprimir e recortar.",
+          "preco": 5,
           "arquivos": [
             "PACOTE PREMIUM/PHOTOCARDS KPOP/photocard - ENHYPEN(1).pdf"
           ]
         },
         {
           "id": "pc-exo",
-          "nome": "Photocards EXO",
-          "descricao": "Folha de photocards em PDF pronta para imprimir.",
-          "preco": 3.99,
+          "nome": "EXO",
+          "descricao": "Photocards EXO em PDF (12 páginas, frente e verso), prontos para imprimir e recortar.",
+          "preco": 5,
           "arquivos": [
             "PACOTE PREMIUM/PHOTOCARDS KPOP/photocard - EXO.pdf"
           ]
         },
         {
           "id": "pc-flio",
-          "nome": "Photocards FLIO",
-          "descricao": "Folha de photocards em PDF pronta para imprimir.",
-          "preco": 3.99,
+          "nome": "FLIO",
+          "descricao": "Photocards FLIO em PDF (10 páginas, frente e verso), prontos para imprimir e recortar.",
+          "preco": 5,
           "arquivos": [
             "PACOTE PREMIUM/PHOTOCARDS KPOP/photocard - FLIO.pdf"
           ]
         },
         {
-          "id": "pc-guerreiras-do-k-pop",
-          "nome": "Photocards Guerreiras do K-pop",
-          "descricao": "Folha de photocards em PDF pronta para imprimir.",
-          "preco": 3.99,
+          "id": "pc-girls-generation",
+          "nome": "Girls' Generation",
+          "descricao": "Photocards Girls' Generation em PDF (12 páginas, frente e verso), prontos para imprimir e recortar.",
+          "preco": 5,
+          "arquivos": [
+            "PACOTE PREMIUM/BÔNUS/PHOTOCADS ADICIONAIS/Photocard - GIRLS GENERATION.pdf"
+          ]
+        },
+        {
+          "id": "pc-huntr-x-guerreiras-do-k-pop",
+          "nome": "HUNTR/X – Guerreiras do K-pop",
+          "descricao": "Photocards HUNTR/X – Guerreiras do K-pop em PDF (14 páginas, frente e verso), prontos para imprimir e recortar.",
+          "preco": 5,
           "arquivos": [
             "PACOTE PREMIUM/PHOTOCARDS KPOP/photocard - GUERREIRAS DO K-POP.pdf"
           ]
         },
         {
           "id": "pc-illit",
-          "nome": "Photocards ILLIT",
-          "descricao": "Folha de photocards em PDF pronta para imprimir.",
-          "preco": 3.99,
+          "nome": "ILLIT",
+          "descricao": "Photocards ILLIT em PDF (12 páginas, frente e verso), prontos para imprimir e recortar.",
+          "preco": 5,
           "arquivos": [
             "PACOTE PREMIUM/PHOTOCARDS KPOP/photocard - ILLIT.pdf"
           ]
         },
         {
           "id": "pc-itzy",
-          "nome": "Photocards ITZY",
-          "descricao": "Folha de photocards em PDF pronta para imprimir.",
-          "preco": 3.99,
+          "nome": "ITZY",
+          "descricao": "Photocards ITZY em PDF (13 páginas, frente e verso), prontos para imprimir e recortar.",
+          "preco": 5,
           "arquivos": [
             "PACOTE PREMIUM/PHOTOCARDS KPOP/Photocard - ITZY.pdf"
           ]
         },
         {
           "id": "pc-ive",
-          "nome": "Photocards IVE",
-          "descricao": "Folha de photocards em PDF pronta para imprimir.",
-          "preco": 3.99,
+          "nome": "IVE",
+          "descricao": "Photocards IVE em PDF (12 páginas, frente e verso), prontos para imprimir e recortar.",
+          "preco": 5,
           "arquivos": [
             "PACOTE PREMIUM/PHOTOCARDS KPOP/Photocard - IVE.pdf"
           ]
         },
         {
-          "id": "pc-katsaya",
-          "nome": "Photocards KATSAYA",
-          "descricao": "Folha de photocards em PDF pronta para imprimir.",
-          "preco": 3.99,
+          "id": "pc-katseye-vol-1",
+          "nome": "KATSEYE (vol. 1)",
+          "descricao": "Photocards KATSEYE (vol. 1) em PDF (12 páginas, frente e verso), prontos para imprimir e recortar.",
+          "preco": 5,
           "arquivos": [
             "PACOTE PREMIUM/PHOTOCARDS KPOP/photocard - KATSAYA.pdf"
           ]
         },
         {
-          "id": "pc-katsaye-at",
-          "nome": "Photocards KATSAYE AT",
-          "descricao": "Folha de photocards em PDF pronta para imprimir.",
-          "preco": 3.99,
+          "id": "pc-katseye-vol-2",
+          "nome": "KATSEYE (vol. 2)",
+          "descricao": "Photocards KATSEYE (vol. 2) em PDF (12 páginas, frente e verso), prontos para imprimir e recortar.",
+          "preco": 5,
           "arquivos": [
             "PACOTE PREMIUM/PHOTOCARDS KPOP/photocard - KATSAYE AT.pdf"
           ]
         },
         {
           "id": "pc-lngshot",
-          "nome": "Photocards LNGSHOT",
-          "descricao": "Folha de photocards em PDF pronta para imprimir.",
-          "preco": 3.99,
+          "nome": "LNGSHOT",
+          "descricao": "Photocards LNGSHOT em PDF (12 páginas, frente e verso), prontos para imprimir e recortar.",
+          "preco": 5,
           "arquivos": [
             "PACOTE PREMIUM/PHOTOCARDS KPOP/Photocard -  LNGSHOT.pdf"
           ]
         },
         {
           "id": "pc-newjeans",
-          "nome": "Photocards NEWJEANS",
-          "descricao": "Folha de photocards em PDF pronta para imprimir.",
-          "preco": 3.99,
+          "nome": "NewJeans",
+          "descricao": "Photocards NewJeans em PDF (12 páginas, frente e verso), prontos para imprimir e recortar.",
+          "preco": 5,
           "arquivos": [
             "PACOTE PREMIUM/PHOTOCARDS KPOP/photocard - NEWJEANS.pdf"
           ]
         },
         {
-          "id": "pc-pack-copa-atualizado",
-          "nome": "Pack Copa (atualizado)",
-          "descricao": "Folha de photocards em PDF pronta para imprimir.",
-          "preco": 3.99,
-          "arquivos": [
-            "PACOTE PREMIUM/PHOTOCARDS KPOP/PACK COPA ATUALIZADO.pdf"
-          ]
-        },
-        {
-          "id": "pc-pack-de-variados-atualizacao-semanal",
-          "nome": "Pack de Variados (atualização semanal)",
-          "descricao": "Folha de photocards em PDF pronta para imprimir.",
-          "preco": 3.99,
-          "arquivos": [
-            "PACOTE PREMIUM/PHOTOCARDS KPOP/ATUALIZAÇÃO SEMANAL - PACK DE VARIADOS.pdf"
-          ]
-        },
-        {
           "id": "pc-seventeen",
-          "nome": "Photocards SEVENTEEN",
-          "descricao": "Folha de photocards em PDF pronta para imprimir.",
-          "preco": 3.99,
+          "nome": "SEVENTEEN",
+          "descricao": "Photocards SEVENTEEN em PDF (12 páginas, frente e verso), prontos para imprimir e recortar.",
+          "preco": 5,
           "arquivos": [
             "PACOTE PREMIUM/PHOTOCARDS KPOP/photocard - SEVENTEEN.pdf"
           ]
         },
         {
-          "id": "pc-stray-kids",
-          "nome": "Photocards Stray Kids",
-          "descricao": "Folha de photocards em PDF pronta para imprimir.",
-          "preco": 3.99,
+          "id": "pc-stray-kids-vol-1",
+          "nome": "Stray Kids (vol. 1)",
+          "descricao": "Photocards Stray Kids (vol. 1) em PDF (12 páginas, frente e verso), prontos para imprimir e recortar.",
+          "preco": 5,
           "arquivos": [
             "PACOTE PREMIUM/PHOTOCARDS KPOP/photocard - STRAYKIDS.pdf"
           ]
         },
         {
-          "id": "pc-stray-kids-pack-atualizado",
-          "nome": "Photocards Stray Kids (pack atualizado)",
-          "descricao": "Folha de photocards em PDF pronta para imprimir.",
-          "preco": 3.99,
+          "id": "pc-stray-kids-vol-2",
+          "nome": "Stray Kids (vol. 2)",
+          "descricao": "Photocards Stray Kids (vol. 2) em PDF (10 páginas, frente e verso), prontos para imprimir e recortar.",
+          "preco": 5,
           "arquivos": [
             "PACOTE PREMIUM/PHOTOCARDS KPOP/PACK ATUALIZADO STRAYKIDS.pdf"
           ]
         },
         {
           "id": "pc-twice",
-          "nome": "Photocards TWICE",
-          "descricao": "Folha de photocards em PDF pronta para imprimir.",
-          "preco": 3.99,
+          "nome": "TWICE",
+          "descricao": "Photocards TWICE em PDF (12 páginas, frente e verso), prontos para imprimir e recortar.",
+          "preco": 5,
           "arquivos": [
             "PACOTE PREMIUM/PHOTOCARDS KPOP/photocard - TWICE.pdf"
           ]
         },
         {
           "id": "pc-txt",
-          "nome": "Photocards TXT",
-          "descricao": "Folha de photocards em PDF pronta para imprimir.",
-          "preco": 3.99,
+          "nome": "TXT",
+          "descricao": "Photocards TXT em PDF (12 páginas, frente e verso), prontos para imprimir e recortar.",
+          "preco": 5,
           "arquivos": [
             "PACOTE PREMIUM/PHOTOCARDS KPOP/photocard - TXT.pdf"
           ]
         },
         {
-          "id": "pc-whh",
-          "nome": "Photocards WHH",
-          "descricao": "Folha de photocards em PDF pronta para imprimir.",
-          "preco": 3.99,
+          "id": "pc-wolf-howl-harmony",
+          "nome": "Wolf Howl Harmony",
+          "descricao": "Photocards Wolf Howl Harmony em PDF (12 páginas, frente e verso), prontos para imprimir e recortar.",
+          "preco": 5,
           "arquivos": [
             "PACOTE PREMIUM/PHOTOCARDS KPOP/photocard - WHH.pdf"
+          ]
+        }
+      ]
+    },
+    {
+      "categoria": "Photocards de membros",
+      "descricao": "Escolha o(a) idol:",
+      "produtos": [
+        {
+          "id": "pc-bang-chan-stray-kids",
+          "nome": "Bang Chan (Stray Kids)",
+          "descricao": "Photocards Bang Chan (Stray Kids) em PDF (10 páginas, frente e verso), prontos para imprimir e recortar.",
+          "preco": 5,
+          "arquivos": [
+            "PACOTE PREMIUM/BÔNUS/PHOTOCADS ADICIONAIS/photocard - BANGCHAN.pdf"
+          ]
+        },
+        {
+          "id": "pc-james-cortis",
+          "nome": "James (CORTIS)",
+          "descricao": "Photocards James (CORTIS) em PDF (12 páginas, frente e verso), prontos para imprimir e recortar.",
+          "preco": 5,
+          "arquivos": [
+            "PACOTE PREMIUM/BÔNUS/PHOTOCADS ADICIONAIS/photocard - JAMES.pdf"
+          ]
+        },
+        {
+          "id": "pc-jimin-bts",
+          "nome": "Jimin (BTS)",
+          "descricao": "Photocards Jimin (BTS) em PDF (12 páginas, frente e verso), prontos para imprimir e recortar.",
+          "preco": 5,
+          "arquivos": [
+            "PACOTE PREMIUM/BÔNUS/PHOTOCADS ADICIONAIS/photocard - JIMIN.pdf"
+          ]
+        },
+        {
+          "id": "pc-moonbin",
+          "nome": "Moonbin",
+          "descricao": "Photocards Moonbin em PDF (3 páginas, frente e verso), prontos para imprimir e recortar.",
+          "preco": 5,
+          "arquivos": [
+            "PACOTE PREMIUM/BÔNUS/PHOTOCADS ADICIONAIS/photocard - MOONBIM.pdf"
+          ]
+        },
+        {
+          "id": "pc-rm-bts",
+          "nome": "RM (BTS)",
+          "descricao": "Photocards RM (BTS) em PDF (6 páginas, frente e verso), prontos para imprimir e recortar.",
+          "preco": 5,
+          "arquivos": [
+            "PACOTE PREMIUM/BÔNUS/PHOTOCADS ADICIONAIS/photocard - RM.pdf"
+          ]
+        },
+        {
+          "id": "pc-suga-bts",
+          "nome": "SUGA (BTS)",
+          "descricao": "Photocards SUGA (BTS) em PDF (12 páginas, frente e verso), prontos para imprimir e recortar.",
+          "preco": 5,
+          "arquivos": [
+            "PACOTE PREMIUM/BÔNUS/PHOTOCADS ADICIONAIS/Photocard - SUGA BTS.pdf"
+          ]
+        },
+        {
+          "id": "pc-sunoo-enhypen",
+          "nome": "Sunoo (ENHYPEN)",
+          "descricao": "Photocards Sunoo (ENHYPEN) em PDF (12 páginas, frente e verso), prontos para imprimir e recortar.",
+          "preco": 5,
+          "arquivos": [
+            "PACOTE PREMIUM/BÔNUS/PHOTOCADS ADICIONAIS/Photocard - SUNO.pdf"
+          ]
+        },
+        {
+          "id": "pc-v-kim-taehyung-bts",
+          "nome": "V – Kim Taehyung (BTS)",
+          "descricao": "Photocards V – Kim Taehyung (BTS) em PDF (12 páginas, frente e verso), prontos para imprimir e recortar.",
+          "preco": 5,
+          "arquivos": [
+            "PACOTE PREMIUM/BÔNUS/PHOTOCADS ADICIONAIS/photocard - KIM TAEHYUNG.pdf"
+          ]
+        },
+        {
+          "id": "pc-yunah-illit",
+          "nome": "Yunah (ILLIT)",
+          "descricao": "Photocards Yunah (ILLIT) em PDF (12 páginas, frente e verso), prontos para imprimir e recortar.",
+          "preco": 5,
+          "arquivos": [
+            "PACOTE PREMIUM/BÔNUS/PHOTOCADS ADICIONAIS/photocard - YUNAH.pdf"
+          ]
+        }
+      ]
+    },
+    {
+      "categoria": "BTS Arirang Tour",
+      "descricao": "Photocards especiais do BTS:",
+      "produtos": [
+        {
+          "id": "bts-tour-toronto",
+          "nome": "BTS Arirang Tour – Toronto",
+          "descricao": "Photocards do BTS da Arirang Tour (Toronto), frente e verso, prontos para imprimir. PDF com 16 páginas.",
+          "preco": 5,
+          "arquivos": [
+            "PACOTE PREMIUM/BÔNUS/BTS TOUR ARIRIRANG/Photocard - BTS IN TORONTO.pdf"
+          ]
+        },
+        {
+          "id": "bts-tour-chicago",
+          "nome": "BTS Arirang Tour – Chicago",
+          "descricao": "Photocards do BTS da Arirang Tour (Chicago), frente e verso, prontos para imprimir. PDF com 16 páginas.",
+          "preco": 5,
+          "arquivos": [
+            "PACOTE PREMIUM/BÔNUS/BTS TOUR ARIRIRANG/Photocard - BTS IN CHICAGO.pdf"
+          ]
+        },
+        {
+          "id": "bts-tour-los-angeles",
+          "nome": "BTS Arirang Tour – Los Angeles",
+          "descricao": "Photocards do BTS da Arirang Tour (Los Angeles), frente e verso, prontos para imprimir. PDF com 34 páginas.",
+          "preco": 5,
+          "arquivos": [
+            "PACOTE PREMIUM/BÔNUS/BTS TOUR ARIRIRANG/Photocard - BTS LOS ANGELES.pdf"
+          ]
+        },
+        {
+          "id": "bts-tour-baltimore",
+          "nome": "BTS Arirang Tour – Baltimore",
+          "descricao": "Photocards do BTS da Arirang Tour (Baltimore), frente e verso, prontos para imprimir. PDF com 16 páginas.",
+          "preco": 5,
+          "arquivos": [
+            "PACOTE PREMIUM/BÔNUS/BTS TOUR ARIRIRANG/Photocard - BTS IN BALTIMORE.pdf"
+          ]
+        },
+        {
+          "id": "bts-tour-arlington",
+          "nome": "BTS Arirang Tour – Arlington",
+          "descricao": "Photocards do BTS da Arirang Tour (Arlington), frente e verso, prontos para imprimir. PDF com 16 páginas.",
+          "preco": 5,
+          "arquivos": [
+            "PACOTE PREMIUM/BÔNUS/BTS TOUR ARIRIRANG/Photocard - BTS IN ARLINGTON.pdf"
+          ]
+        },
+        {
+          "id": "bts-tour-east-rutherford",
+          "nome": "BTS Arirang Tour – East Rutherford",
+          "descricao": "Photocards do BTS da Arirang Tour (East Rutherford), frente e verso, prontos para imprimir. PDF com 32 páginas.",
+          "preco": 5,
+          "arquivos": [
+            "PACOTE PREMIUM/BÔNUS/BTS TOUR ARIRIRANG/Photocard - BTS ESPECIAL EAST RUTHEFORD.pdf"
+          ]
+        },
+        {
+          "id": "bts-tour-bruxelas",
+          "nome": "BTS Arirang Tour – Bruxelas",
+          "descricao": "Photocards do BTS da Arirang Tour (Bruxelas), frente e verso, prontos para imprimir. PDF com 12 páginas.",
+          "preco": 5,
+          "arquivos": [
+            "PACOTE PREMIUM/BÔNUS/BTS TOUR ARIRIRANG/photocard - BTS BRUXELAS.pdf"
+          ]
+        },
+        {
+          "id": "bts-tour-atualizacao-semanal",
+          "nome": "BTS Arirang Tour – Atualização semanal",
+          "descricao": "Photocards do BTS da Arirang Tour (Atualização semanal), frente e verso, prontos para imprimir. PDF com 4 páginas.",
+          "preco": 5,
+          "arquivos": [
+            "PACOTE PREMIUM/BÔNUS/BTS TOUR ARIRIRANG/Photocard - BTS ATUALIZAÇÃO SEMANAL.pdf"
+          ]
+        },
+        {
+          "id": "bts-especial-13-anos",
+          "nome": "BTS – Especial 13 anos",
+          "descricao": "Photocards comemorativos dos 13 anos do BTS, frente e verso. PDF com 11 páginas.",
+          "preco": 5,
+          "arquivos": [
+            "PACOTE PREMIUM/BÔNUS/BTS TOUR ARIRIRANG/Photocard - BTS ESPECIAL 13 ANOS.pdf"
+          ]
+        },
+        {
+          "id": "bts-especial-final-copa",
+          "nome": "BTS – Especial Final da Copa",
+          "descricao": "Photocards especiais do BTS para a final da Copa, frente e verso. PDF com 12 páginas.",
+          "preco": 5,
+          "arquivos": [
+            "PACOTE PREMIUM/BÔNUS/BTS TOUR ARIRIRANG/photocard - BTS ESPECIAL FINAL COPA.pdf"
+          ]
+        }
+      ]
+    },
+    {
+      "categoria": "Packs especiais",
+      "descricao": "Escolha o pack:",
+      "produtos": [
+        {
+          "id": "pc-pack-variados",
+          "nome": "Pack de Variados (atualização semanal)",
+          "descricao": "Photocards de vários grupos de K-pop, atualização da semana. PDF com 14 páginas.",
+          "preco": 5,
+          "arquivos": [
+            "PACOTE PREMIUM/PHOTOCARDS KPOP/ATUALIZAÇÃO SEMANAL - PACK DE VARIADOS.pdf"
+          ]
+        },
+        {
+          "id": "pc-pack-copa",
+          "nome": "Pack Copa",
+          "descricao": "Photocards temáticos da Copa, com a camisa da seleção brasileira. PDF com 10 páginas.",
+          "preco": 5,
+          "arquivos": [
+            "PACOTE PREMIUM/PHOTOCARDS KPOP/PACK COPA ATUALIZADO.pdf"
+          ]
+        }
+      ]
+    },
+    {
+      "categoria": "Papelaria K-pop",
+      "descricao": "Itens para imprimir e montar:",
+      "produtos": [
+        {
+          "id": "caixinhas-photocards",
+          "nome": "Caixinhas para photocards (coleção A4)",
+          "descricao": "Moldes de caixinhas para guardar photocards, de vários grupos, em folha A4. PDF com 18 páginas.",
+          "preco": 5,
+          "arquivos": [
+            "PACOTE PREMIUM/BÔNUS/CAIXINHAS PHOTOCARDS/COLECAO-CAIXINHAS-PHOTOCARDS-A4.pdf"
+          ]
+        },
+        {
+          "id": "caixa-presente-bts",
+          "nome": "Caixa de presente BTS",
+          "descricao": "Molde de caixa de presente com tema BTS para imprimir e montar. PDF com 4 páginas.",
+          "preco": 5,
+          "arquivos": [
+            "PACOTE PREMIUM/BÔNUS/CAIXA PRESENTE KPOP/Cópia de Cópia de ca7c9463a5bf6e97afff_-_caixa de presente - bts.pdf"
+          ]
+        },
+        {
+          "id": "bloquinhos-bts",
+          "nome": "Bloquinhos BTS",
+          "descricao": "Folhas de bloquinhos de anotação com tema BTS. PDF com 3 páginas.",
+          "preco": 5,
+          "arquivos": [
+            "PACOTE PREMIUM/BÔNUS/BLOQUINHOS/Cópia de 0878562c6e1d6dd2b827_-_bloquinhos - bts.pdf"
+          ]
+        },
+        {
+          "id": "folhas-personalizadas-bts",
+          "nome": "Folhas personalizadas BTS",
+          "descricao": "Folhas pautadas decoradas com tema BTS, para cartas e anotações. PDF com 31 páginas.",
+          "preco": 5,
+          "arquivos": [
+            "PACOTE PREMIUM/BÔNUS/FOLHAS PERSONALIZADAS KPOP/Cópia de ae47963d3e2954382e7d_-_folhas bts.pdf"
+          ]
+        },
+        {
+          "id": "planner-semanal-bts",
+          "nome": "Planner semanal BTS",
+          "descricao": "Planner semanal para imprimir, com tema BTS. PDF com 8 páginas.",
+          "preco": 5,
+          "arquivos": [
+            "PACOTE PREMIUM/BÔNUS/PLANNER KPOP/Cópia de 8e2145678aaf740e44d4_-_planner semanal - bts.pdf"
+          ]
+        },
+        {
+          "id": "livro-de-colorir-bts",
+          "nome": "Livro de colorir BTS",
+          "descricao": "Desenhos do BTS para colorir. PDF com 51 páginas.",
+          "preco": 5,
+          "arquivos": [
+            "PACOTE PREMIUM/BÔNUS/LIVRO DE COLORIR/Cópia de LIVRO DE COLORIR BTS.pdf"
+          ]
+        }
+      ]
+    },
+    {
+      "categoria": "Guias para vender",
+      "descricao": "Material para quem quer vender photocards:",
+      "produtos": [
+        {
+          "id": "guia-como-vender",
+          "nome": "Guia: como vender photocards",
+          "descricao": "Como precificar e vender photocards: cálculo de preço, materiais e ofertas. PDF com 3 páginas.",
+          "preco": 5,
+          "arquivos": [
+            "PACOTE PREMIUM/BÔNUS/GUIA DE COMO VENDER/EXPLICAÇÃO DE COMO VENDER.pdf"
+          ]
+        },
+        {
+          "id": "script-de-vendas",
+          "nome": "Script de vendas",
+          "descricao": "Mensagens prontas para vender pelo WhatsApp e redes sociais. PDF com 20 páginas.",
+          "preco": 5,
+          "arquivos": [
+            "PACOTE PREMIUM/BÔNUS/GUIA DE COMO VENDER/SCRIPT DE VENDAS.pdf"
+          ]
+        },
+        {
+          "id": "guia-impressao-calendarios",
+          "nome": "Guia de impressão – calendários",
+          "descricao": "Passo a passo para imprimir e montar calendários. PDF com 8 páginas.",
+          "preco": 5,
+          "arquivos": [
+            "PACOTE PREMIUM/BÔNUS/GUIA DE COMO VENDER/GUIA DE IMPRESSÃO - CALENDÁRIOS.pdf"
           ]
         }
       ]

@@ -10,16 +10,20 @@ Atendimento virtual no **WhatsApp** para venda de photocards e outros artigos em
 ```
 👤 oi
 🤖 Olá! 💜 Bem-vindo(a) à Photocards K-pop!
-   1️⃣ ⭐ Pacote Premium Completo — R$ 29,90
-   2️⃣ Pack Photocards K-pop — R$ 19,90
-   3️⃣ Pack BTS Tour Arirang — R$ 12,90
-   4️⃣ Photocards avulsos (por grupo) ➜
-👤 3
-🖼️ [prévias]  🤖 Pack BTS Tour Arirang … 💰 R$ 12,90   1️⃣ Comprar com Pix
+   1️⃣ Photocards de grupos K-pop ➜
+   2️⃣ Photocards de membros ➜
+   3️⃣ BTS Arirang Tour ➜
+   4️⃣ Packs especiais ➜
+   5️⃣ Papelaria K-pop ➜
+   6️⃣ Guias para vender ➜
+👤 1
+🤖 1️⃣ aespa — R$ 5,00   2️⃣ ATEEZ — R$ 5,00 …
+👤 6
+🖼️ [prévia]  🤖 BTS … 💰 R$ 5,00   1️⃣ Comprar com Pix
 👤 1
 🤖 Pedido #C0FB3BE1 … 🖼️ [QR code]  🤖 00020126…(copia e cola)
    … cliente paga …
-🤖 ✅ Pagamento confirmado!  📎 PDF  📎 PDF  📎 PDF …
+🤖 ✅ Pagamento confirmado!  📎 photocard - BTS.pdf
 ```
 
 Comandos que o cliente pode digitar a qualquer momento: `menu`, `pedidos`, `reenviar CÓDIGO`, `atendente`, `cancelar`, `pix`.
@@ -79,21 +83,24 @@ Tudo fica no [`catalog.json`](catalog.json):
 {
   "menu": [
     {
-      "id": "pack-bts-tour",                  // identificador único
-      "nome": "Pack BTS Tour Arirang",
-      "descricao": "Photocards especiais da turnê…",
-      "preco": 12.90,                          // em reais
-      "arquivos": ["PACOTE PREMIUM/BÔNUS/BTS TOUR ARIRIRANG"]  // pastas ou arquivos do repositório
+      "categoria": "Photocards de grupos K-pop",   // submenu
+      "produtos": [
+        {
+          "id": "pc-bts",                          // identificador único
+          "nome": "BTS",
+          "descricao": "Photocards BTS em PDF…",
+          "preco": 5,                              // em reais
+          "arquivos": ["PACOTE PREMIUM/PHOTOCARDS KPOP/photocard - BTS.pdf"]  // arquivos ou pastas do repositório
+        }
+      ]
     },
-    {
-      "categoria": "Photocards avulsos (por grupo)",   // submenu
-      "produtos": [ { "id": "pc-bts", "nome": "Photocards BTS", "preco": 3.99, "arquivos": ["PACOTE PREMIUM/PHOTOCARDS KPOP/photocard - BTS.pdf"] } ]
-    }
+    { "id": "...", "nome": "Produto direto no menu principal", "preco": 5, "arquivos": ["..."] }
   ]
 }
 ```
 
-- **Os preços atuais são sugestões — ajuste antes de começar a vender.**
+- Hoje há **um item por PDF (56 itens), todos a R$ 5,00**, separados em 6 categorias.
+- Para vender um pacote com vários PDFs, crie um item cujo `arquivos` aponte para uma pasta (ex.: `"PACOTE PREMIUM"`).
 - Uma pasta em `arquivos` inclui tudo dentro dela (PDFs e o vídeo `.mp4`).
 - **Para adicionar um produto**: suba o PDF no repositório, adicione a entrada no `catalog.json` e gere as prévias:
 
@@ -128,7 +135,6 @@ Para publicar novos PDFs: dê `git pull` no servidor e reinicie (`pm2 restart ph
 ## Observações importantes
 
 - O bot usa o [Baileys](https://github.com/WhiskeySockets/Baileys) (conexão igual ao WhatsApp Web, pelo QR code). É a forma mais simples e gratuita, mas **não é a API oficial**: envio em massa ou spam pode levar ao bloqueio do número. O bot só responde quem manda mensagem, o que reduz esse risco. Se quiser migrar para a API oficial (WhatsApp Cloud API da Meta), basta trocar `src/whatsapp.js` — a lógica da conversa (`src/bot.js`) é independente.
-- O Pacote Premium Completo tem ~860 MB em 58 arquivos; o envio leva alguns minutos e ocupa espaço no celular do cliente.
 - Respeite os direitos autorais/de imagem do conteúdo que você vende.
 
 ## Estrutura

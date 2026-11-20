@@ -45,8 +45,12 @@ test('catálogo carrega e todos os arquivos existem', () => {
     assert.ok(p.previews.length > 0, `${p.id} sem prévia`);
     for (const f of p.files) assert.ok(fs.existsSync(f.absPath));
   }
-  const premium = catalog.getProduct('pacote-premium');
-  assert.ok(premium.files.length >= 50);
+  // um item de menu para cada PDF, todos a R$ 5
+  assert.equal(catalog.products.length, 56);
+  for (const p of catalog.products) {
+    assert.equal(p.files.length, 1, p.id);
+    assert.equal(p.price, 5, p.id);
+  }
 });
 
 test('fluxo completo: menu -> produto -> Pix -> pagamento -> entrega do PDF', async () => {
@@ -54,11 +58,11 @@ test('fluxo completo: menu -> produto -> Pix -> pagamento -> entrega do PDF', as
 
   let r = await say('oi');
   assert.match(r[0].text, /Bem-vindo/);
-  assert.match(r[0].text, /Pacote Premium/);
+  assert.match(r[0].text, /BTS Arirang Tour/);
 
-  // categoria de avulsos (4ª opção) -> primeiro grupo
-  r = await say('4');
-  assert.match(r[0].text, /avulsos/);
+  // categoria de grupos -> primeiro grupo
+  r = await say('1');
+  assert.match(r[0].text, /grupos/);
   r = await say('1');
   assert.equal(r[0].type, 'image');
   assert.match(r[0].caption, /Prévia/);
@@ -103,25 +107,13 @@ test('fluxo completo: menu -> produto -> Pix -> pagamento -> entrega do PDF', as
   assert.equal(r.filter((m) => m.type === 'doc').length, 1);
 });
 
-test('pacote completo entrega todos os arquivos', async () => {
-  const { say, store, payments, bot, catalog, out } = setup();
-  await say('menu');
-  await say('1');
-  await say('1');
-  const order = store.findOrders((o) => o.jid === JID)[0];
-  assert.equal(order.productId, 'pacote-premium');
-  payments.approve(order.paymentId);
-  out.length = 0;
-  await bot.handlePaymentNotification(order.paymentId);
-  assert.equal(out.filter((m) => m.type === 'doc').length, catalog.getProduct('pacote-premium').files.length);
-});
-
 test('cancelar pedido e opção inválida', async () => {
   const { say, store } = setup();
   await say('menu');
   let r = await say('99');
   assert.match(r[0].text, /Não entendi/);
-  await say('2');
+  await say('3');
+  await say('1');
   await say('1');
   r = await say('cancelar');
   assert.match(r[0].text, /cancelado/);
@@ -131,6 +123,7 @@ test('cancelar pedido e opção inválida', async () => {
 test('pagamento com valor menor não libera o PDF', async () => {
   const { say, store, payments, bot, out } = setup();
   await say('menu');
+  await say('3');
   await say('2');
   await say('1');
   const order = store.findOrders((o) => o.jid === JID)[0];
