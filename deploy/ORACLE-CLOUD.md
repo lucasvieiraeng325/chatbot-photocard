@@ -91,7 +91,6 @@ bash instalar.sh
 
 The script asks for:
 - the Mercado Pago **production Access Token** (`APP_USR-...`);
-- the bot's **WhatsApp number** (`55` + area code + number);
 - the numbers that get **sale alerts** (optional).
 
 ## 6. Connect WhatsApp
@@ -99,10 +98,16 @@ The script asks for:
 > ⚠️ First turn off any other running copy of the bot using the same number.
 
 ```bash
-pm2 logs photocard-bot
+pm2 logs photocard-bot --raw --lines 0
 ```
 
-An **8-letter code** appears. On the bot's phone, go to **WhatsApp → Linked devices → Link a device → Link with phone number instead** and type the code. When **"✅ WhatsApp conectado"** appears, press `Ctrl+C`; the bot keeps running.
+A **QR code** appears. On the bot's phone, go to **WhatsApp → Linked devices → Link a device** and scan it (it changes every ~20 s; use the latest). When **"✅ WhatsApp conectado"** appears, press `Ctrl+C`; the bot keeps running.
+
+If the QR looks broken in the terminal, download the image to your computer (Windows PowerShell):
+
+```powershell
+scp -i "$HOME\Downloads\ssh-key-XXXX.key" ubuntu@PUBLIC_IP:~/chatbot-photocard/data/qr.png "$HOME\Downloads\qr.png"; start "$HOME\Downloads\qr.png"
+```
 
 Test it by sending "oi" to the bot from another phone.
 
