@@ -10,7 +10,7 @@ Escolha uma VPS com **Ubuntu 24.04** (ou 22.04):
 | **Hostinger VPS KVM 1** | ~R$ 30–40/mês | Painel em português, servidor no Brasil, suporte em PT — **recomendado para começar** |
 | Contabo Cloud VPS S | ~US$ 5–7/mês | Muito recurso pelo preço; servidor no Brasil disponível |
 | DigitalOcean / Vultr | US$ 6/mês | Simples e confiável; pagamento em dólar |
-| Oracle Cloud Free Tier | grátis | Bom, mas o cadastro costuma ser recusado/demorado |
+| Oracle Cloud Free Tier | grátis | Passo a passo em [`ORACLE-CLOUD.md`](ORACLE-CLOUD.md) |
 
 > Preços mudam — confira no site. Evite hospedagens "serverless" (Vercel, Netlify): o bot precisa ficar ligado o tempo todo e guardar a sessão do WhatsApp em disco.
 
