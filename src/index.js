@@ -24,7 +24,10 @@ const sender = await startWhatsApp({
   authDir: defaultAuthDir(config.dataDir),
   pairingNumber: config.pairingNumber,
   logger,
-  onMessage: (jid, text) => bot.handleMessage(jid, text),
+  onMessage: (jid, text) => {
+    logger.info({ de: jid.split('@')[0], texto: text.slice(0, 50) }, '📩 mensagem recebida');
+    bot.handleMessage(jid, text);
+  },
 });
 bot = new Bot({ catalog, store, payments, sender, config, logger });
 

@@ -13,10 +13,11 @@ import makeWASocket, {
 import qrcode from 'qrcode-terminal';
 import QRCode from 'qrcode';
 import { HttpsProxyAgent } from 'https-proxy-agent';
-import { ProxyAgent } from 'undici';
+import { ProxyAgent, setGlobalDispatcher } from 'undici';
 
 // Se houver HTTPS_PROXY no ambiente, conecta ao WhatsApp através dele
 const PROXY = process.env.HTTPS_PROXY || process.env.https_proxy || '';
+if (PROXY) setGlobalDispatcher(new ProxyAgent(PROXY)); // fetch() de downloads/uploads de mídia
 const proxyAgents = PROXY ? { agent: new HttpsProxyAgent(PROXY), fetchAgent: new ProxyAgent(PROXY) } : {};
 
 function extractText(message) {
