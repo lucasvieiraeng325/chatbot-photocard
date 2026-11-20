@@ -103,8 +103,12 @@ export async function startWhatsApp({ authDir, pairingNumber, logger, onMessage 
       if (connection === 'close') {
         const code = lastDisconnect?.error?.output?.statusCode;
         if (code === DisconnectReason.loggedOut) {
-          logger.error('Sessão do WhatsApp encerrada (logout). Apague a pasta data/auth e rode de novo para escanear o QR.');
-          process.exit(1);
+          // Sessão inválida (aparelho desconectado no celular ou pareamento que não terminou):
+          // apaga a sessão salva e começa de novo, mostrando um novo QR/código.
+          logger.error('Sessão do WhatsApp encerrada. Gerando nova conexão — use o novo código/QR que vai aparecer.');
+          fs.rmSync(authDir, { recursive: true, force: true });
+          setTimeout(connect, 3000);
+          return;
         }
         logger.warn({ code }, 'conexão fechada, reconectando...');
         setTimeout(connect, code === DisconnectReason.restartRequired ? 0 : 3000);
