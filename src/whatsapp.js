@@ -11,6 +11,13 @@ import makeWASocket, {
   useMultiFileAuthState,
 } from '@whiskeysockets/baileys';
 import qrcode from 'qrcode-terminal';
+import QRCode from 'qrcode';
+import { HttpsProxyAgent } from 'https-proxy-agent';
+import { ProxyAgent } from 'undici';
+
+// Se houver HTTPS_PROXY no ambiente, conecta ao WhatsApp através dele
+const PROXY = process.env.HTTPS_PROXY || process.env.https_proxy || '';
+const proxyAgents = PROXY ? { agent: new HttpsProxyAgent(PROXY), fetchAgent: new ProxyAgent(PROXY) } : {};
 
 function extractText(message) {
   if (!message) return null;
@@ -62,6 +69,7 @@ export async function startWhatsApp({ authDir, pairingNumber, logger, onMessage 
       browser: Browsers.macOS('Desktop'),
       markOnlineOnConnect: false,
       syncFullHistory: false,
+      ...proxyAgents,
     });
 
     sock.ev.on('creds.update', saveCreds);
@@ -76,6 +84,11 @@ export async function startWhatsApp({ authDir, pairingNumber, logger, onMessage 
         } else if (!pairingNumber) {
           console.log('\n📱 Escaneie o QR code abaixo em WhatsApp > Aparelhos conectados > Conectar um aparelho:\n');
           qrcode.generate(qr, { small: true });
+          // também salva como imagem (útil quando o terminal não mostra bem o QR)
+          const qrFile = path.join(path.dirname(authDir), 'qr.png');
+          QRCode.toFile(qrFile, qr, { width: 500, margin: 2 })
+            .then(() => console.log(`   (QR code também salvo em ${qrFile})`))
+            .catch(() => {});
         }
       }
       if (connection === 'open') logger.info('✅ WhatsApp conectado');
